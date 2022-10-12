@@ -50,7 +50,7 @@ elif args.update != None and args.u == None and args.p == None and args.t == Non
   dir = os.getcwd()
   for f in os.listdir(dir):
     os.remove(os.path.join(dir, f))
-  Repo.clone_from("https://github.com/HasanAshab/XerXes", "../../../XerXes")
+  Repo.clone_from("https://github.com/HasanAshab/XerXes", dir)
   print('Done!\n')
 else:
   raise Exception("Invalid input!\ntry -h for help\n")
