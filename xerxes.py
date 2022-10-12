@@ -47,7 +47,7 @@ if args.u != None and args.p != None and args.t != None:
 
 elif args.update != None and args.u == None and args.p == None and args.t == None:
   print('Updating to latest vertion....')
-  dir = getcwd()
+  dir = os.getcwd()
   for f in os.listdir(dir):
     os.remove(os.path.join(dir, f))
   Repo.clone_from("https://github.com/HasanAshab/XerXes", "../../../XerXes")
