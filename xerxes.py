@@ -5,7 +5,7 @@ import threading
 import random
 import struct
 import re
-from git import Repo
+#from git import Repo
 
 parser = argparse.ArgumentParser(description ='***DDoS attack script by python***')
 
@@ -45,6 +45,11 @@ if args.u != None and args.p != None and args.t != None:
     t = threading.Thread(target=attack)
     t.start()
 
+else:
+  raise Exception("Invalid input!\ntry -h for help\n") 
+
+
+"""
 elif args.update != None and args.u == None and args.p == None and args.t == None:
   print('Updating to latest vertion....')
   dir = os.getcwd()
@@ -52,5 +57,4 @@ elif args.update != None and args.u == None and args.p == None and args.t == Non
     os.remove(os.path.join(dir, f))
   Repo.clone_from("https://github.com/HasanAshab/XerXes", dir)
   print('Done!\n')
-else:
-  raise Exception("Invalid input!\ntry -h for help\n")
+"""                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
